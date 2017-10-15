@@ -13,16 +13,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 //установка пути, где находятся файлы
 app.use(express.static(__dirname));
 
-/* АНАЛИЗ GET-запросов*/
-app.get('/', function(req, res) {
-    res.setHeader('Content-type', 'text/html');
-    res.sendFile(__dirname + '/index.html');
-})
-app.get('/admin', function(req, res) {
-    res.setHeader('Content-type', 'text/html');
-    res.sendFile(__dirname + '/admin.html');
-})
-
 /*Анализ post-запросов*/
 
 //выгрузка списка компаний в админку
@@ -154,6 +144,18 @@ app.post('/updateCompany', function(req, res) {
 
 })
 app.post('/addCompany', function(req, res) {})
+
+/* АНАЛИЗ GET-запросов*/
+app.get(['/admin', '/admin/*'], function(req, res) {
+    res.setHeader('Content-type', 'text/html');
+    res.sendFile(__dirname + '/admin.html');
+});
+app.get(['/', '/*'], function(req, res) {
+    res.setHeader('Content-type', 'text/html');
+    res.sendFile(__dirname + '/index.html');
+});
+
+
 
 //по кд слушаем порт
 app.listen(8000);
