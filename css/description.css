@@ -1,0 +1,41 @@
+.description{
+    max-width: 700px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.description-logo{
+    width: auto;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.description-row{
+    max-width: 700px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 7px solid #FDD00A;
+    align-items: center;
+}
+
+.description-text{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.description-site{
+    padding-left: 30px;
+    background-image: url('../img/siteIcon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.description-tel{
+    padding-left: 30px;
+    background-image: url('../img/phoneIcon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}

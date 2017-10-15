@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Админ-панель</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src = "js/admin.js"></script>
+    <style media="screen">
+        body{
+            font-size: 25px;
+        }
+
+        .logo1, .logo2{
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="" action="/updateCompany" method="post" enctype="multipart/form-data">
+        <table class="table table-bordered">
+            <tr>
+                <td>Выберите город</td>
+                <td>
+                    <div class="cities">
+                        <select class="" name="city">
+                            <option value="Nijnevatorsk">Нижневаторск</option>
+                            <option value="Tumen">Тюмень</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Выберите категорию</td>
+                <td>
+                    <div class="categories">
+                        <select class="" name="category">
+                                <option value="childrens">Все для детей</option>
+                                <option value="auto">Все для авто</option>
+                                <option value="food">Еда и напитки</option>
+                                <option value="health">Красота и здоровье</option>
+                                <option value="furniture">Мебель и интерьер</option>
+                                <option value="accessories">Одежда и аксессуары</option>
+                                <option value="recreation">Отдых и развлечения</option>
+                                <option value="building">Ремонт и строительство</option>
+                                <option value="services"Услуги</option>
+                            </select>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Выберите компанию</td>
+                <td>
+                    <div class="companies">
+                        <select class="" name="company">
+                            <option value="new">Добавить новую</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Логотип в списке</td>
+                <td><input type="file" name="logo1" multiple></td>
+                <td><div class="logo1"></div></td>
+            </tr>
+            <tr>
+                <td>Изображение в описании</td>
+                <td><input type="file" name="logo2" value=""></td>
+                <td><div class="logo2"></div></td>
+            </tr>
+            <tr>
+                <td>Название</td>
+                <td><input type="text" name="name" value=""></td>
+            </tr>
+            <tr>
+                <td>Адрес</td>
+                <td><input type="text" name="adres" value=""></td>
+            </tr>
+            <tr>
+                <td>Веб-сайт</td>
+                <td><input type="text" name="site" value=""></td>
+            </tr>
+            <tr>
+                <td>Телефон</td>
+                <td><input type="tel" name="phone" value=""></td>
+            </tr>
+            <tr>
+                <td>Описание</td>
+                <td><textarea name="description" rows="8" cols="80"></textarea></td>
+            </tr>
+            <tr>
+                <td>Итог</td>
+                <td><input class = "btn btn-success"type="submit" name="" value="Сохранить"></td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
